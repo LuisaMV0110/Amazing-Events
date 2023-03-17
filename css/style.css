@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,100&family=Raleway:ital,wght@0,200;0,400;1,200;1,400&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Raleway', sans-serif;
+}
+.nav_events{
+border-bottom: 1px solid rgb(226, 43, 183);
+box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.26);
+}
+.nav_logo{
+margin-left: 3rem;
+}
+.nav_container{
+gap: 1rem;
+margin-right: 3rem;
+}
+.nav-link{
+border-radius: 5px;
+border: 2px solid rgb(226, 43, 183);
+}
+.nav-link:hover{
+background-color: rgb(242, 174, 207);
+}
+.slider_header{
+box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.26);
+}
+.img_header{
+width: 100%;
+height: 10rem;
+}
+.h1_header{
+text-shadow: #000000 1px 1px 7px
+}
+.social{
+width: 10rem;
+display: flex;
+align-items: center;
+justify-content: space-around;
+gap: 1rem;
+}
+.social a{
+text-decoration: none;
+color: white;
+font-size: 2rem;
+box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.699);
+border-radius: 50%;
+transition: all 0.3s;
+}
+.social a:hover{
+transform: scale(1.2);
+}
+.social_2{
+display: flex;
+align-items: center;
+color: white;
+}
+.social_2 h4{
+text-shadow: #000000 1px 1px 3px
+}
+.container_cards{
+gap: 2rem;
+margin: 3rem;
+}
+.form_ch a{
+text-decoration: none;
+color: #000000;
+}
+.form_ch a:hover{
+color: #fff;
+}
+.check{
+gap: 2rem;
+}
+body{
+background: rgb(255,124,192);
+background: linear-gradient(0deg, rgba(255,124,192,0.7228641456582633) 0%, rgba(255,255,255,1) 40%);
+}
+main{
+min-height: 70vh;
+
+}
+.main_details{
+min-height: 82vh;
+background: rgb(255,124,192);
+background: linear-gradient(0deg, rgba(255,124,192,0.7228641456582633) 0%, rgba(255,255,255,1) 40%);
+}
+table{
+margin-top: -1rem;
+}
+caption{
+padding-left: 1rem;
+caption-side: top;
+font-weight: bold;
+background-color: #f5aac8;
+border: #ff005991 2px solid;
+font-size: 0.9rem;
+min-width: 18.2rem;
+}
+th{
+width: 25rem;
+}
+td{
+text-align: center;
+}
+.card_detail{
+width: auto;
+}
+.img_details{
+width: 30rem;
+}
+.card2{
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+border: #ff0066 2px double;
+border-radius: 10px;
+max-width: 1200px;
+margin: 2rem;
+}
+.card2 img{
+border-radius: 10px;
+
+}
+.card-title2{
+text-align: center;
+color: white;
+}
+.card-text2{
+width: 100%;
+padding-left: 1rem;
+padding-right: 1rem;
+color: white;
+}
+.section_details{
+background-color: #f5aac8;
+margin: 1rem;
+border-radius: 10px;
+}
+.img_cards{
+height: 180px;
+}
+.card3{
+width: 18rem;
+}
+.form-check-input{
+cursor: pointer;
+}
+footer{
+min-height: 9.7vh;
+display: flex;
+justify-content: space-around;
+background: rgb(246,205,222);
+background: radial-gradient(circle, rgba(246,205,222,1) 0%, rgba(255,65,113,1) 34%);
+}
+@media only screen and (max-width: 1265px){
+.card_detail section{
+margin-bottom: 1rem;
+}
+}
+@media only screen and (max-width: 991px) {
+.nav_container{
+margin-top: 0.5rem;
+margin-right: 0;
+}
+
+.nav-link{
+text-align: center;
+border-radius: 0;
+border: 0;
+border-bottom: 1px solid rgb(226, 43, 183);
+}
+.link_1{
+margin-top: 0.5rem;
+}
+}
+@media only screen and (min-width: 593px) and (max-width: 992px){
+.card2{
+min-width: 35rem;
+margin: 1rem;
+}
+}
+@media only screen and (min-width: 375px) and (max-width: 592px){
+.card2{
+min-width: 20rem;
+margin: 0.5rem;
+}
+}
+
+@media only screen and (max-width: 374px){
+.card-text2{
+font-size: 1.1rem;
+}
+.card2{
+max-width: 18rem;
+}
+}

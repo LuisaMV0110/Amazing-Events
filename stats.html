@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Events|Stats</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/Fav Amazing Events.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/92e84a8749.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white nav_events">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="nav_logo" src="./img/Logo Amazing Events.png" alt="Logo" width="100" ></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav nav_container">
+                    <a class="nav-link link_1" href="/index.html">Home</a>
+                    <a class="nav-link" href="./upcomingEvents.html">Upcoming Events</a>
+                    <a class="nav-link" href="./pastEvents.html">Past Events</a>
+                    <a class="nav-link" href="./contact.html">Contact</a>
+                    <a class="nav-link active"  aria-current="page" href="#">Stats</a>
+                </div>
+                </div>
+            </div>
+        </nav>
+        <div id="carouselExampleControlsNoTouching" class="carousel slide slider_header" data-bs-touch="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="./img/bg_rosa2.jpg" class="d-block img_header" alt="...">
+                <div class="carousel-caption">
+                    <h1 class="h1_header">Stats</h1>
+                </div>
+                </div>
+            </div>
+                <a href="./contact.html" class="carousel-control-prev" role="button" data-bs-target="#carouselExampleControlsNoTouching">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </a>
+                <a href="./index.html" class="carousel-control-next" role="button" data-bs-target="#carouselExampleControlsNoTouching">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+    </header>
+    <main id="app">
+        <div class="tables_stats d-flex mt-5 mb-4 justify-content-center align-items-center">
+        <div class="w-75 d-flex flex-column align-items-center">
+            <!-- table1 -->
+            <table class="table table-bordered border-danger">
+                <caption>Events Statistics</caption>
+                <thead>
+                    <tr>
+                    <th class="text-center align-middle">Events with highest percentage of attendance</th>
+                    <th class="text-center align-middle">Events with the lowest percentage of attendance</th>
+                    <th class="text-center align-middle">Event with larger capacity</th>
+                    </tr>
+                </thead>
+                <tbody id="generalStats">
+                    <tr>
+                        <td>{{highestAttendance.name}} {{highestAttendance.percent}}%</td>
+                        <td>{{lowestAttendance.name}} {{lowestAttendance.percent}}%</td>
+                        <td>{{largerCapacity.name}} {{largerCapacity.capacity}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- table2 -->
+            <table class="table table-bordered border-danger">
+                <caption>Upcoming Events Statistics by Category</caption>
+                <thead>
+                    <tr>
+                    <th class="text-center align-middle">Categories</th>
+                    <th class="text-center align-middle">Revenues</th>
+                    <th class="text-center align-middle">Percentage of attendance</th>
+                    </tr>
+                </thead>
+                <tbody id="upcomingStats" v-for="stat of upcomingStats">
+                    <tr>
+                        <td>{{stat.name}}</td>
+                        <td>{{stat.revenues}}</td>
+                        <td>{{stat.percent}}%</td>
+                    </tr>
+                </tbody>
+            </table>
+                <!-- table3 -->
+            <table class="table table-bordered border-danger">
+                <caption> Past Events Statistics by Category</caption>
+                <thead>
+                    <tr>
+                    <th class="text-center align-middle">Categories</th>
+                    <th class="text-center align-middle">Revenues</th>
+                    <th class="text-center align-middle">Percentage of attendance</th>
+                    </tr>
+                </thead>
+                <tbody id="pastStats" v-for="stat of pastStats">
+                    <tr>
+                        <td>{{stat.name}}</td>
+                        <td>{{stat.revenues}}</td>
+                        <td>{{stat.percent}}%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/stats.js"></script>
+</body>
+<footer>
+    <div class="social">
+        <a href="https://www.instagram.com" class="fa-brands fa-instagram"></a>
+        <a href="https://www.facebook.com" class="fa-brands fa-facebook"></a>
+        <a href="https://www.whatsapp.com" class="fa-brands fa-whatsapp"></a>
+    </div>
+    <section class="social_2">
+        <h4>Cohort 44-45</h4>
+    </section>
+</footer>
+</html>
