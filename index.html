@@ -81,7 +81,7 @@
         <div class="container_cards d-flex justify-content-center flex-wrap mt-5">
             <template v-if="filterEvents.length > 0" v-for="event of filterEvents">
             <div class="card card3">
-                <img v-bind:src="event.image" class="card-img-top img_cards" alt="Picture of {{event.image}}"/>
+                <img :src="event.image" class="card-img-top img_cards" :alt="'Picture of ' + event.name"/>
                 <section class="card-body text-center">
                     <h5 class="card-title">{{event.name}}</h5>
                     <p class="card-text">{{event.description}}</p>

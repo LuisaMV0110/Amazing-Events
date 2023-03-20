@@ -19,6 +19,7 @@ createApp({
             this.createGeneralStats()
             this.createCategoryStats(this.events.filter(event0 => event0.estimate), this.upcomingStats)
             this.createCategoryStats(this.events.filter(event0 => event0.assistance), this.pastStats)
+            
         })
         .catch(error => console.log(error))
     },
@@ -38,12 +39,12 @@ createApp({
             accum.percent = Number(totalPercent / accum.percentArray.length).toFixed(1);
             return accum;
         },
-        createCategoryStats: function (events, list){
+        createCategoryStats: function (events, container){
             let setCategory = Array.from(new Set (events.map(event0 => event0.category).sort()))
             setCategory.forEach(category => {
                 let categoryStats = this.accumulator(events.filter(event0 => event0.category === category))
                 categoryStats.name = category
-                list.push(categoryStats)
+                container.push(categoryStats)
             } )
         },
         createGeneralStats: function(){
